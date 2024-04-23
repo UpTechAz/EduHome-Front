@@ -11,26 +11,6 @@ window.addEventListener("DOMContentLoaded", function () {
     toggleIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
   };
 
-  // courses hissesindeki search inputunda inputun temizlenmesi
-  // ve inputun icinde x duymesinin gorunub ortadan qaldirilmasi
-
-  let courseSearchInput = document.querySelector(
-    ".courses-area .container .row .col-12 .course-form .input-div .course-search-input"
-  );
-  let courseClearBtn = document.querySelector(
-    ".courses-area .container .row .col-12 .course-form .input-div .course-clear-btn"
-  );
-
-  courseSearchInput.addEventListener("input", function () {
-    courseClearBtn.classList.add("clear-btn-yes");
-  });
-
-  courseClearBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-    courseSearchInput.value = "";
-    courseClearBtn.classList.remove("clear-btn-yes");
-  });
-
   //home ve about hissesindeki video-nun acilib baglanmasi
 
   let popup_btn = document.querySelector(".video-popup-btn");
@@ -57,4 +37,24 @@ window.addEventListener("DOMContentLoaded", function () {
     popup_video_main_holder.classList.remove("popup-show");
     document.querySelector(".iframe-holder iframe").src = "";
   });
+});
+
+// courses hissesindeki search inputunda inputun temizlenmesi
+// ve inputun icinde x duymesinin gorunub ortadan qaldirilmasi
+
+let courseSearchInput = document.querySelector(
+  ".courses-area .container .row .col-12 .course-form .input-div .course-search-input"
+);
+let courseClearBtn = document.querySelector(
+  ".courses-area .container .row .col-12 .course-form .input-div .course-clear-btn"
+);
+
+courseSearchInput.addEventListener("input", function () {
+  courseClearBtn.classList.add("clear-btn-yes");
+});
+
+courseClearBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  courseSearchInput.value = "";
+  courseClearBtn.classList.remove("clear-btn-yes");
 });
