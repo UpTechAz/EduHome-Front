@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", function () {
-  //header roggle-menu
+  //header toggle-menu
   const toggleBtn = document.querySelector(".toggle_btn");
   const toggleIcon = document.querySelector(".toggle_btn i");
   const dropDownMenu = document.querySelector(".dropdown_menu");
@@ -10,6 +10,27 @@ window.addEventListener("DOMContentLoaded", function () {
     const isOpen = dropDownMenu.classList.contains("open");
     toggleIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
   };
+
+  //owl-carousel
+
+  $(document).ready(function () {
+    // Sayfa tamamen yüklendiğinde çalışacak kodlar buraya yazılır
+    $(".slider-owl").owlCarousel({
+      loop: true,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 1,
+        },
+        1000: {
+          items: 1,
+        },
+      },
+    });
+  });
 
   //home ve about hissesindeki video-nun acilib baglanmasi
 

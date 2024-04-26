@@ -26,6 +26,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="./src/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./src/css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
     <title>EduHome</title>
   </head>
@@ -33,7 +35,7 @@
     <header id="Header">
       <div class="navbar">
         <div class="logo">
-          <a href="#">
+          <a href="/index.html">
             <img src="./src/images/logo2.webp" alt="" />
           </a>
         </div>
@@ -143,14 +145,34 @@
         </div>
       </div>
     </header>
-    <!-- <section id="hero">
-      <img
-        src="./src/images/slider3.webp"
-        alt=""
-        class="d-block col-12 cover h-100 cover"
-      />
-     
-    </section> -->
+
+    <section id="hero">
+      <div class="slider-owl owl-carousel owl-theme">
+        <div class="owl-stage-outer">
+          <div class="owl-stage">
+            <div class="owl-item">
+              <div
+                class="single-slide item"
+                style="background-image: url(src/images/slider3.webp)"
+              ></div>
+            </div>
+            <div class="owl-item">
+              <div
+                class="single-slide item"
+                style="background-image: url(src/images/slider2.webp)"
+              ></div>
+            </div>
+            <div class="owl-item">
+              <div
+                class="single-slide item"
+                style="background-image: url(src/images/slider1.webp)"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="courses">
       <div class="pt-150 text-center">
         <div class="container">
@@ -700,5 +722,12 @@
       </div>
     </div>
   </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="/src/js/owl.carousel.min.js"></script>
   <script src="/src/js/main.js"></script>
 </html>
