@@ -125,7 +125,6 @@
 
     .skill-area {
       margin-top: 58px;
-
       margin-left: 40px;
 
       h4 {
@@ -137,6 +136,10 @@
     }
 
     .skill-wrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
       .skill-bar-item {
         overflow: hidden;
         padding-top: 5px;

@@ -517,6 +517,7 @@ body {
   width: 100%;
   height: auto;
   background-color: #fff;
+  margin-top: 50px;
 
   @include section-title(34px);
 
@@ -534,6 +535,10 @@ body {
       a {
         text-decoration: none;
         color: #303030;
+
+        &:hover {
+          color: #ec1c23;
+        }
       }
     }
 
@@ -717,6 +722,17 @@ body {
       max-height: 380px;
       overflow-y: auto;
 
+      .single_notice_right {
+        padding: 10px 0;
+
+        h4 {
+          font-size: 16px;
+          font-weight: 700;
+          color: red;
+          padding-bottom: 5px;
+        }
+      }
+
       &::-webkit-scrollbar {
         width: 5px;
         margin-right: 2px;
@@ -792,9 +808,13 @@ body {
     z-index: 1;
     margin-right: -30px;
     padding: 0 20px;
+    width: 100%;
+    height: 100%;
 
     img {
       width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     &::after {
@@ -806,6 +826,18 @@ body {
       content: "";
       height: 88%;
       z-index: -1;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .about-content {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 12px;
+      }
     }
   }
 }
@@ -909,6 +941,7 @@ body {
     .event_content {
       overflow: hidden;
       padding: 23px 35px 25px;
+      text-align: left;
 
       ul {
         margin: 0;
@@ -983,9 +1016,15 @@ body {
 
 .testimonial {
   padding: 5rem 0;
+  background-color: #fafafa;
+  margin: 5rem 0;
+  width: 100%;
 
   .single_testimonial {
     .testimonial_info {
+      width: 100%;
+      padding: 0 3rem;
+
       .testimonial_img {
         height: 77px;
         margin: auto auto 28px;
@@ -998,11 +1037,12 @@ body {
       }
 
       .testimonial_content {
-        padding: 0 35px;
+        padding: 2rem 3rem;
+        margin: 0 5rem;
 
         p,
         h5 {
-          font-size: 1rem;
+          font-size: 0.9rem;
           color: #606060;
           font-weight: 400;
           margin-bottom: 15px;
@@ -1399,6 +1439,7 @@ body {
   top: 0;
   overflow: hidden auto;
   display: none;
+
   .popup-video-main {
     text-align: center;
     position: absolute;
@@ -1411,6 +1452,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
     .popup-video-content {
       line-height: 0;
       width: 100%;
@@ -1420,10 +1462,12 @@ body {
       vertical-align: middle;
       text-align: left;
       z-index: 1045;
+
       .iframe-holder {
         width: 100%;
         height: 0;
         padding-top: 56.25%;
+
         .popup-close-btn {
           position: absolute;
           color: #fff;
@@ -1444,10 +1488,12 @@ body {
             sans-serif;
           opacity: 0.6;
           transition: 0.5s ease-in-out;
+
           &:hover {
             opacity: 1;
           }
         }
+
         iframe {
           display: block;
           top: 0;
