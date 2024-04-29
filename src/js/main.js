@@ -65,6 +65,58 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  //hero-slide
+
+  $(".slider-owl").owlCarousel({
+    loop: true,
+    nav: true,
+    animateOut: "fadeOut",
+    animateIn: "fadeIn",
+    dots: false,
+    smartSpeed: 2500,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 1,
+      },
+      1000: {
+        items: 1,
+      },
+    },
+  });
+
+  $(".owl-carousel").on("changed.owl.carousel", function (event) {
+    var currentIndex = event.item.index;
+    $(".owl-item").removeClass("active");
+    $(".owl-item").eq(currentIndex).addClass("active");
+  });
+
+  // testimonial and about slide
+
+  $(".testimonial-owl").owlCarousel({
+    loop: true,
+    nav: true,
+    dots: false,
+    nav: false,
+    navText: [
+      '<i class="fa fa-angle-left"></i>',
+      '<i class="fa fa-angle-right"></i>',
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 1,
+      },
+      1000: {
+        items: 1,
+      },
+    },
+  });
+
   //home ve about hissesindeki video-nun acilib baglanmasi
 
   let popup_btn = document.querySelector(".video-popup-btn");
