@@ -1,34 +1,120 @@
 window.addEventListener("DOMContentLoaded", function () {
-  //header roggle-menu
-  const toggleBtn = document.querySelector(".toggle_btn");
-  const toggleIcon = document.querySelector(".toggle_btn i");
-  const dropDownMenu = document.querySelector(".dropdown_menu");
+  //scroll ile headerin olcusunun kicilmesi
 
-  toggleBtn.onclick = function () {
-    dropDownMenu.classList.toggle("open");
+  let header = document.querySelector("#header");
 
-    const isOpen = dropDownMenu.classList.contains("open");
-    toggleIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-  };
+  function handleScroll() {
+    let scrollPosition = window.scrollY;
 
-  // courses hissesindeki search inputunda inputun temizlenmesi
-  // ve inputun icinde x duymesinin gorunub ortadan qaldirilmasi
+    if (scrollPosition >= 100) {
+      header.classList.add("sticky-header");
+    } else {
+      header.classList.remove("sticky-header");
+    }
+  }
 
-  let courseSearchInput = document.querySelector(
-    ".courses-area .container .row .col-12 .course-form .input-div .course-search-input"
-  );
-  let courseClearBtn = document.querySelector(
-    ".courses-area .container .row .col-12 .course-form .input-div .course-clear-btn"
-  );
+  window.addEventListener("scroll", handleScroll);
 
-  courseSearchInput.addEventListener("input", function () {
-    courseClearBtn.classList.add("clear-btn-yes");
+  //header search input-un acilmasi
+  let headerSearchBtn = document.querySelector(".header-search-button");
+  let searchArea = document.querySelector(".search-input-div");
+
+  headerSearchBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    searchArea.classList.toggle("search-input-open");
   });
 
-  courseClearBtn.addEventListener("click", function (e) {
+  //header-in burger menu acilmasi
+
+  let burgerBtn = document.querySelector(".burger-btn");
+  let mobMenu = document.querySelector(".mobile-header");
+
+  burgerBtn.addEventListener("click", function (e) {
     e.preventDefault();
-    courseSearchInput.value = "";
-    courseClearBtn.classList.remove("clear-btn-yes");
+    mobMenu.classList.toggle("show-mobile-header");
+
+    let icon = burgerBtn.querySelector("i");
+    if (icon.classList.contains("fa-bars")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  });
+
+  //mob-menu-da toggle-menularin acilmasi
+
+  let plusMinusBtns = document.querySelectorAll(".plus-minus-btn");
+
+  for (let btn of plusMinusBtns) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      let index = btn.getAttribute("data-index");
+      let toggleMenu = document.querySelector(
+        `.mob-nav-toggle[data-index="${index}"]`
+      );
+
+      toggleMenu.classList.toggle("show-toggle");
+
+      if (toggleMenu.classList.contains("show-toggle")) {
+        btn.textContent = "-";
+      } else {
+        btn.textContent = "+";
+      }
+    });
+  }
+
+  //hero-slide
+
+  $(".slider-owl").owlCarousel({
+    loop: true,
+    nav: true,
+    animateOut: "fadeOut",
+    animateIn: "fadeIn",
+    dots: false,
+    smartSpeed: 2500,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 1,
+      },
+      1000: {
+        items: 1,
+      },
+    },
+  });
+
+  $(".owl-carousel").on("changed.owl.carousel", function (event) {
+    var currentIndex = event.item.index;
+    $(".owl-item").removeClass("active");
+    $(".owl-item").eq(currentIndex).addClass("active");
+  });
+
+  // testimonial and about slide
+
+  $(".testimonial-owl").owlCarousel({
+    loop: true,
+    nav: true,
+    dots: false,
+    nav: false,
+    navText: [
+      '<i class="fa fa-angle-left"></i>',
+      '<i class="fa fa-angle-right"></i>',
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 1,
+      },
+      1000: {
+        items: 1,
+      },
+    },
   });
 
   //home ve about hissesindeki video-nun acilib baglanmasi
@@ -57,4 +143,24 @@ window.addEventListener("DOMContentLoaded", function () {
     popup_video_main_holder.classList.remove("popup-show");
     document.querySelector(".iframe-holder iframe").src = "";
   });
+});
+
+// courses hissesindeki search inputunda inputun temizlenmesi
+// ve inputun icinde x duymesinin gorunub ortadan qaldirilmasi
+
+let courseSearchInput = document.querySelector(
+  ".courses-area .container .row .col-12 .course-form .input-div .course-search-input"
+);
+let courseClearBtn = document.querySelector(
+  ".courses-area .container .row .col-12 .course-form .input-div .course-clear-btn"
+);
+
+courseSearchInput.addEventListener("input", function () {
+  courseClearBtn.classList.add("clear-btn-yes");
+});
+
+courseClearBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  courseSearchInput.value = "";
+  courseClearBtn.classList.remove("clear-btn-yes");
 });

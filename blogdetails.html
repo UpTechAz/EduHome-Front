@@ -30,116 +30,223 @@
     <title>EduHome</title>
   </head>
   <body>
-    <header id="Header">
-      <div class="navbar">
-        <div class="logo">
-          <a href="#">
-            <img src="./src/images/logo2.webp" alt="" />
-          </a>
-        </div>
-        <ul class="nav_links">
-          <li class="nav_item_li">
-            <a href="#">Home</a>
-            <div class="dropdown">
-              <ul>
-                <li>
-                  <a href="#">Home 1</a>
-                </li>
-                <li>
-                  <a href="#">Home 2</a>
-                </li>
-                <li>
-                  <a href="#">Home 3</a>
-                </li>
-              </ul>
+    <header id="header" class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-5 col-6 logo-div">
+            <div class="logo">
+              <a href="/index.html">
+                <img src="/src/images/logo2.webp" alt="edu-home" />
+              </a>
             </div>
-          </li>
-          <li class="nav_item_li">
-            <a href="#" class="nav_item">About</a>
-          </li>
-          <li class="nav_item_li">
-            <a href="#" class="nav_item">Courses</a>
-            <div class="dropdown">
-              <ul>
-                <li>
-                  <a href="#">Courses</a>
-                </li>
-                <li>
-                  <a href="#">Courses Details</a>
-                </li>
-              </ul>
+          </div>
+          <div class="col-md-9 col-sm-7 col-6 menu-div">
+            <div class="main-navbar">
+              <div class="main-menu">
+                <div class="main-nav">
+                  <ul class="main-nav-ul">
+                    <li class="main-nav-li">
+                      <a href="/index.html" class="main-nav-a">Home</a>
+                      <ul class="dropdown-ul">
+                        <li class="dropdown-ul-li">
+                          <a href="/index.html">Home One</a>
+                        </li>
+                        <li class="dropdown-ul-li">
+                          <a href="/index.html">Home Two</a>
+                        </li>
+                        <li class="dropdown-ul-li">
+                          <a href="/index.html">Home Three</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/about.html" class="main-nav-a">About</a>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/courses.html" class="main-nav-a">Courses</a>
+                      <ul class="dropdown-ul">
+                        <li class="dropdown-ul-li">
+                          <a href="/courses.html">Courses</a>
+                        </li>
+                        <li class="dropdown-ul-li">
+                          <a href="/coursedetails.html">Course Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/event.html" class="main-nav-a">Event</a>
+                      <ul class="dropdown-ul">
+                        <li class="dropdown-ul-li">
+                          <a href="/event.html">Event</a>
+                        </li>
+                        <li class="dropdown-ul-li">
+                          <a href="/eventdetails.html">Event Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/teacher.html" class="main-nav-a">Teacher</a>
+                      <ul class="dropdown-ul">
+                        <li class="dropdown-ul-li">
+                          <a href="/teacher.html">Teacher</a>
+                        </li>
+                        <li class="dropdown-ul-li">
+                          <a href="/teachers_details.html">Teacher Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/blog.html" class="main-nav-a">Blog</a>
+                      <ul class="dropdown-ul">
+                        <li class="dropdown-ul-li">
+                          <a href="/blog.html">Blog</a>
+                        </li>
+                        <li class="dropdown-ul-li">
+                          <a href="/blogdetails.html">Blog Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/contact.html" class="main-nav-a">Contact</a>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/about.html" class="main-nav-a">Buy Now</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="search-button">
+                <a href="" class="header-search-button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <div class="search-input-div">
+                  <div class="search-form">
+                    <form action="">
+                      <input type="text" placeholder="Search here..." />
+                      <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <a href="" class="burger-btn">
+                <i class="fa-solid fa-bars"></i>
+              </a>
             </div>
-          </li>
-          <li class="nav_item_li">
-            <a href="#" class="nav_item">Event</a>
-            <div class="dropdown">
-              <ul>
-                <li>
-                  <a href="#">Event</a>
-                </li>
-                <li>
-                  <a href="#">Event Details</a>
-                </li>
-              </ul>
+          </div>
+
+          <div class="col-12 mobile-header">
+            <div class="mobile-menu">
+              <div class="main-bar">
+                <nav class="main-mob-nav">
+                  <ul class="main-mob-nav-ul">
+                    <li class="main-mob-nav-li">
+                      <a href="/index.html" class="main-mob-nav-a">Home</a>
+                      <a href="" class="plus-minus-btn" data-index="1">+</a>
+                      <ul class="mob-nav-toggle" data-index="1">
+                        <li class="mob-nav-toggle-li">
+                          <a href="/index.html" class="mob-nav-toggle-a"
+                            >Home One</a
+                          >
+                        </li>
+                        <li class="mob-nav-toggle-li">
+                          <a href="/index.html" class="mob-nav-toggle-a"
+                            >Home Two</a
+                          >
+                        </li>
+                        <li class="mob-nav-toggle-li">
+                          <a href="/index.html" class="mob-nav-toggle-a"
+                            >Home Three</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/about.html" class="main-mob-nav-a">About</a>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/courses.html" class="main-mob-nav-a">Courses</a>
+                      <a href="" class="plus-minus-btn" data-index="2">+</a>
+                      <ul class="mob-nav-toggle" data-index="2">
+                        <li class="mob-nav-toggle-li">
+                          <a href="/courses.html" class="mob-nav-toggle-a"
+                            >Courses</a
+                          >
+                        </li>
+                        <li class="mob-nav-toggle-li">
+                          <a
+                            href="/coursedetails.html"
+                            #
+                            class="mob-nav-toggle-a"
+                            >Course Details</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/event.html" class="main-mob-nav-a">Event</a>
+                      <a href="" class="plus-minus-btn" data-index="3">+</a>
+                      <ul class="mob-nav-toggle" data-index="3">
+                        <li class="mob-nav-toggle-li">
+                          <a href="/event.html" class="mob-nav-toggle-a"
+                            >Event</a
+                          >
+                        </li>
+                        <li class="mob-nav-toggle-li">
+                          <a href="/eventdetails.html" class="mob-nav-toggle-a"
+                            >Event Details</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/teacher.html" class="main-mob-nav-a"
+                        >Teachers</a
+                      >
+                      <a href="" class="plus-minus-btn" data-index="4">+</a>
+                      <ul class="mob-nav-toggle" data-index="4">
+                        <li class="mob-nav-toggle-li">
+                          <a href="/teacher.html" class="mob-nav-toggle-a"
+                            >Teachers</a
+                          >
+                        </li>
+                        <li class="mob-nav-toggle-li">
+                          <a
+                            href="/teachers_details.html"
+                            class="mob-nav-toggle-a"
+                            >Teacher Details</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/blog.html" class="main-mob-nav-a">Blog</a>
+                      <a href="" class="plus-minus-btn" data-index="5">+</a>
+                      <ul class="mob-nav-toggle" data-index="5">
+                        <li class="mob-nav-toggle-li">
+                          <a href="/blog.html" class="mob-nav-toggle-a">Blog</a>
+                        </li>
+                        <li class="mob-nav-toggle-li">
+                          <a href="/blogdetails.html" class="mob-nav-toggle-a"
+                            >Blog Details</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/contact.html" class="main-mob-nav-a">Contact</a>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/about.html" class="main-mob-nav-a">Buy Now</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
-          </li>
-          <li class="nav_item_li">
-            <a href="/teacher.html" class="nav_item">Teacher</a>
-            <div class="dropdown">
-              <ul>
-                <li>
-                  <a href="#">Teacher</a>
-                </li>
-                <li>
-                  <a href="#">Teacher Details</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav_item_li">
-            <a href="#" class="nav_item">Blog</a>
-            <div class="dropdown">
-              <ul>
-                <li>
-                  <a href="#">Blog</a>
-                </li>
-                <li>
-                  <a href="#">Blog Details</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav_item_li">
-            <a href="#" class="nav_item">Contact</a>
-          </li>
-          <li class="nav_item_li">
-            <a href="#" class="nav_item">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </li>
-        </ul>
-        <div class="toggle_btn">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="dropdown_menu">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Courses</a>
-          </li>
-          <li>
-            <a href="#">Teacher</a>
-          </li>
-          <li>
-            <a href="#">Blog</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
+          </div>
         </div>
       </div>
     </header>
@@ -160,15 +267,15 @@
       </div>
     </section>
 
-    <div class="courses-details-area">
+    <div class="blogs-details-area">
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-            <div class="courses-details">
-              <div class="course-detail-img">
+            <div class="blogs-details">
+              <div class="blog-detail-img">
                 <img src="/src/images/blog-details-leftpart.webp" alt="" />
               </div>
-              <div class="course-details-content">
+              <div class="blog-details-content">
                 <h2>I must explain to you how all this a mistaken idea</h2>
                 <span>By Alex / June 20, 2022 / </span>
                 <i class="fa-regular fa-comments"></i>
@@ -189,7 +296,7 @@
                   haness pcias unde omnis iste natus error sit voluptatem
                   accusantium doloremque laudantium, totam rem aperiam
                 </p>
-                <p class="course-details-content-different-p">
+                <p class="blog-details-content-different-p">
                   I must explain to you how all this a mistaken idea of
                   denouncing great explorer of the rut the is lder of human
                   haness pcias unde omnis iste natus error sit voluptatem
@@ -203,52 +310,244 @@
                   quae ab illo inventore veritatis et quasi architecto beatae
                   vitae dicta sunt explicabo emo enim ipsam
                 </p>
-                <div class="contact-form-part-main">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-12 col-md-12 contact-form-right">
-                        <div class="contact-form-content-part">
-                          <h3>leave a reply</h3>
-                          <p>
-                            I must explain to you how all this a mistaken idea
-                            of ncing great explorer of the rut the is lder of
-                            human happinescias unde omnis iste natus error sit
-                            volptatem
-                          </p>
-                        </div>
-                        <div class="contact-form-form-part">
-                          <form action="">
-                            <p>Name</p>
-                            <input type="text" name="name" />
-                            <p>Email</p>
-                            <input type="email" name="email" />
-                            <p>Subject</p>
-                            <input type="text" name="subject" />
-                            <p>Message</p>
-                            <textarea
-                              name="message"
-                              id=""
-                              cols="30"
-                              rows="10"
-                            ></textarea>
-                            <button type="submit">
-                              <span>Send Message</span>
-                            </button>
-                          </form>
-                        </div>
-                      </div>
+              </div>
+            </div>
+
+            <div class="blogs-reply-area">
+              <div class="all-replies">
+                <h2>recent reviews</h2>
+                <div class="showing-replies">
+                  <div class="single-reply">
+                    <h4>Soltan Mustafali</h4>
+                    <h6>blog Fee</h6>
+                    <p>
+                      When taking into account the price and the number of
+                      students, I can say that the efficiency rate of the blog
+                      is doubtful for me. I consider that despite the
+                      participation of many students as helpful in developing
+                      speaking and communication skills, it will be hard to
+                      concentrate on lessons in the class.
+                    </p>
+                    <div class="reply-button-area">
+                      <button type="button" class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="single-reply">
+                    <h4>Soltan Mustafali</h4>
+                    <h6>blog Fee</h6>
+                    <p>
+                      When taking into account the price and the number of
+                      students, I can say that the efficiency rate of the blog
+                      is doubtful for me. I consider that despite the
+                      participation of many students as helpful in developing
+                      speaking and communication skills, it will be hard to
+                      concentrate on lessons in the class.
+                    </p>
+                    <div class="reply-button-area">
+                      <button type="button" class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="single-reply">
+                    <h4>Soltan Mustafali</h4>
+                    <h6>blog Fee</h6>
+                    <p>
+                      When taking into account the price and the number of
+                      students, I can say that the efficiency rate of the blog
+                      is doubtful for me. I consider that despite the
+                      participation of many students as helpful in developing
+                      speaking and communication skills, it will be hard to
+                      concentrate on lessons in the class.
+                    </p>
+                    <div class="reply-button-area">
+                      <button type="button" class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="single-reply">
+                    <h4>Soltan Mustafali</h4>
+                    <h6>blog Fee</h6>
+                    <p>
+                      When taking into account the price and the number of
+                      students, I can say that the efficiency rate of the blog
+                      is doubtful for me. I consider that despite the
+                      participation of many students as helpful in developing
+                      speaking and communication skills, it will be hard to
+                      concentrate on lessons in the class.
+                    </p>
+                    <div class="reply-button-area">
+                      <button type="button" class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="single-reply">
+                    <h4>Soltan Mustafali</h4>
+                    <h6>blog Fee</h6>
+                    <p>
+                      When taking into account the price and the number of
+                      students, I can say that the efficiency rate of the blog
+                      is doubtful for me. I consider that despite the
+                      participation of many students as helpful in developing
+                      speaking and communication skills, it will be hard to
+                      concentrate on lessons in the class.
+                    </p>
+                    <div class="reply-button-area">
+                      <button type="button" class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="single-reply">
+                    <h4>Soltan Mustafali</h4>
+                    <h6>blog Fee</h6>
+                    <p>
+                      When taking into account the price and the number of
+                      students, I can say that the efficiency rate of the blog
+                      is doubtful for me. I consider that despite the
+                      participation of many students as helpful in developing
+                      speaking and communication skills, it will be hard to
+                      concentrate on lessons in the class.
+                    </p>
+                    <div class="reply-button-area">
+                      <button type="button" class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="single-reply">
+                    <h4>Soltan Mustafali</h4>
+                    <h6>blog Fee</h6>
+                    <p>
+                      When taking into account the price and the number of
+                      students, I can say that the efficiency rate of the blog
+                      is doubtful for me. I consider that despite the
+                      participation of many students as helpful in developing
+                      speaking and communication skills, it will be hard to
+                      concentrate on lessons in the class.
+                    </p>
+                    <div class="reply-button-area">
+                      <button type="button" class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="single-reply">
+                    <h4>Soltan Mustafali</h4>
+                    <h6>blog Fee</h6>
+                    <p>
+                      When taking into account the price and the number of
+                      students, I can say that the efficiency rate of the blog
+                      is doubtful for me. I consider that despite the
+                      participation of many students as helpful in developing
+                      speaking and communication skills, it will be hard to
+                      concentrate on lessons in the class.
+                    </p>
+                    <div class="reply-button-area">
+                      <button type="button" class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="single-reply">
+                    <h4>Soltan Mustafali</h4>
+                    <h6>blog Fee</h6>
+                    <p>
+                      When taking into account the price and the number of
+                      students, I can say that the efficiency rate of the blog
+                      is doubtful for me. I consider that despite the
+                      participation of many students as helpful in developing
+                      speaking and communication skills, it will be hard to
+                      concentrate on lessons in the class.
+                    </p>
+                    <div class="reply-button-area">
+                      <button type="button" class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="single-reply">
+                    <h4>Soltan Mustafali</h4>
+                    <h6>blog Fee</h6>
+                    <p>
+                      When taking into account the price and the number of
+                      students, I can say that the efficiency rate of the blog
+                      is doubtful for me. I consider that despite the
+                      participation of many students as helpful in developing
+                      speaking and communication skills, it will be hard to
+                      concentrate on lessons in the class.
+                    </p>
+                    <div class="reply-button-area">
+                      <button type="button" class="delete">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </button>
                     </div>
                   </div>
                 </div>
+
+                <div class="reply-pagination">
+                  <ul class="reply-pagination-ul">
+                    <li>
+                      <a href=""><i class="fa-solid fa-chevron-left"></i></a>
+                    </li>
+                    <li class="selected-page"><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li>
+                      <a href=""><i class="fa-solid fa-chevron-right"></i></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
+              <h3>leave a reply</h3>
+              <p>
+                I must explain to you how all this a mistaken idea of ncing
+                great explorer of the rut
+                <br />
+                the is lder of human happinescias unde omnis iste natus error
+                sit volptatem
+              </p>
+              <form action="">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p>name</p>
+                    <input type="text" name="" id="" />
+                  </div>
+                  <div class="col-md-12">
+                    <p>Email</p>
+                    <input type="text" name="" id="" />
+                  </div>
+                  <div class="col-md-12">
+                    <p>subject</p>
+                    <input type="text" name="" id="" />
+                    <p>message</p>
+                    <textarea name="" id="" cols="15" rows="10"></textarea>
+                  </div>
+                </div>
+                <a href="" class="blogs-reply-button">send message</a>
+              </form>
             </div>
           </div>
+
           <div class="col-lg-4">
-            <div class="courses-detail-sidebar">
-              <div class="courses-detail-search">
+            <div class="blogs-detail-sidebar">
+              <div class="blogs-detail-search">
                 <h3>search</h3>
-                <div class="courses-search">
-                  <form action="" id="courses-detail-search">
+                <div class="blogs-search">
+                  <form action="" id="blogs-detail-search">
                     <input
                       type="search"
                       name=""
@@ -261,7 +560,7 @@
                   </form>
                 </div>
               </div>
-              <div class="courses-detail-categories">
+              <div class="blogs-detail-categories">
                 <h3>categories</h3>
                 <ul class="categories-ul">
                   <li><a href="">CSS Engineering (10)</a></li>
@@ -272,15 +571,15 @@
                   <li><a href="">PHP (23)</a></li>
                 </ul>
               </div>
-              <div class="courses-detail-side-banner">
-                <div class="courses-side-single-banner">
-                  <a href="coursedetail.html">
+              <div class="blogs-detail-side-banner">
+                <div class="blogs-side-single-banner">
+                  <a href="blogdetail.html">
                     <img src="/src/images/blog-details-right.webp" alt="" />
                   </a>
                   <h2>best<br />education<br />theme</h2>
                 </div>
               </div>
-              <div class="course-detail-latest-post">
+              <div class="blog-detail-latest-post">
                 <h3>latest post</h3>
                 <div class="single-post">
                   <a href="" class="little-image-a">
@@ -288,13 +587,13 @@
                       src="/src/images/blog-details-right-small-1.webp"
                       alt=""
                     />
-                    <div class="courses-detail-hover">
+                    <div class="blogs-detail-hover">
                       <i class="fa-solid fa-link"></i>
                     </div>
                   </a>
                   <div class="single-post-content">
                     <h4>
-                      <a href="">English Language Course for you</a>
+                      <a href="">English Language blog for you</a>
                     </h4>
                     <p>By Alex / June 20, 2022</p>
                   </div>
@@ -305,7 +604,7 @@
                       src="/src/images/blog-details-right-small-2.webp"
                       alt=""
                     />
-                    <div class="courses-detail-hover">
+                    <div class="blogs-detail-hover">
                       <i class="fa-solid fa-link"></i>
                     </div>
                   </a>
@@ -322,22 +621,22 @@
                       src="/src/images/blog-details-right-small-3.webp"
                       alt=""
                     />
-                    <div class="courses-detail-hover">
+                    <div class="blogs-detail-hover">
                       <i class="fa-solid fa-link"></i>
                     </div>
                   </a>
                   <div class="single-post-content">
                     <h4>
-                      <a href="">English Language Course for you</a>
+                      <a href="">English Language blog for you</a>
                     </h4>
                     <p>By Alex / June 20, 2022</p>
                   </div>
                 </div>
               </div>
-              <div class="courses-details-tags">
+              <div class="blogs-details-tags">
                 <h3>tags</h3>
-                <div class="courses-single-tag">
-                  <a href="" class="mr-10 mb-10">courses</a>
+                <div class="blogs-single-tag">
+                  <a href="" class="mr-10 mb-10">blogs</a>
                   <a href="" class="mr-10 mb-10">education</a>
                   <a href="" class="mr-10 mb-10">tachers</a>
                   <a href="" class="mr-10">learning</a>
@@ -419,7 +718,7 @@
                 <ul>
                   <li><a href="#">addmission</a></li>
                   <li><a href="#">Academic Calender</a></li>
-                  <li><a href="#">Event List</a></li>
+                  <li><a href="/event.html">Event List</a></li>
                   <li><a href="#">Hostel & Dinning</a></li>
                   <li><a href="#">TimeTable</a></li>
                 </ul>
@@ -429,11 +728,11 @@
               <div class="captions">
                 <h3>useful links</h3>
                 <ul>
-                  <li><a href="#">our courses</a></li>
-                  <li><a href="#">about us</a></li>
-                  <li><a href="#">teachers &amp; faculty</a></li>
+                  <li><a href="/blogs.html">our blogs</a></li>
+                  <li><a href="/about.html">about us</a></li>
+                  <li><a href="/teacher.html">teachers &amp; faculty</a></li>
                   <li><a href="#">teams & conditions</a></li>
-                  <li><a href="#">our events</a></li>
+                  <li><a href="/events.html">our events</a></li>
                 </ul>
               </div>
             </div>
