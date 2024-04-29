@@ -512,6 +512,240 @@ body {
   }
 }
 
+.slider-area {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+
+  @keyframes fadeOutDown {
+    0% {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+  }
+
+  .slider-owl {
+    height: 100vh;
+
+    .owl-stage-outer {
+      .owl-stage {
+        .owl-item {
+          .single-slide {
+            background-position: top center;
+            background-size: cover;
+            position: relative;
+
+            &::after {
+              position: absolute;
+              left: 0;
+              top: 0;
+              content: "";
+              background: rgba(0, 0, 0, 0.8);
+              width: 100%;
+              height: 100%;
+            }
+
+            .slider-content-area {
+              .slide-content-wrapper {
+                display: inline-table;
+                width: 100%;
+
+                .slide-content {
+                  z-index: 99;
+                  position: relative;
+                  display: table-cell;
+                  text-align: left;
+                  vertical-align: middle;
+                  height: 100vh;
+
+                  h3 {
+                    color: #fff;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 52px;
+                    font-weight: 800;
+                    line-height: 58px;
+                    padding-top: 80px;
+                    text-transform: capitalize;
+                    animation-delay: 0.7s;
+                    animation-duration: 1s;
+                    animation-fill-mode: both;
+                    animation-name: fadeInUp;
+                  }
+
+                  h2 {
+                    color: #fff;
+                    font-size: 58px;
+                    font-weight: 800;
+                    line-height: 64px;
+                    text-transform: capitalize;
+                    animation-delay: 1.5s;
+                    animation-duration: 1s;
+                    animation-fill-mode: both;
+                    animation-name: fadeInUp;
+                  }
+
+                  p {
+                    color: #fff;
+                    font-family: "Open Sans", sans-serif;
+                    margin-top: 12px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin-bottom: 35px;
+                    animation-delay: 0.8s;
+                    animation-duration: 1s;
+                    animation-fill-mode: both;
+                    animation-name: fadeInUp;
+                  }
+
+                  a {
+                    animation-delay: 1.4s;
+                    animation-duration: 0.8s;
+                    animation-fill-mode: both;
+                    animation-name: fadeInUp;
+                    color: #fff;
+                    display: inline-block;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 16px;
+                    font-weight: 700;
+                    overflow: hidden;
+                    padding: 8px 25px 9px;
+                    position: relative;
+                    text-transform: uppercase;
+                    z-index: 9;
+                    background: #ec1c23;
+                    text-decoration: none;
+                  }
+                }
+              }
+
+              .slider-img {
+                z-index: 1;
+                position: relative;
+                margin-right: -25px;
+                animation-delay: 0.2s;
+                animation-duration: 1s;
+                animation-fill-mode: both;
+                animation-name: fadeInRight;
+                height: 100%;
+
+                img {
+                  display: block;
+                  animation-delay: 0.2s;
+                  animation-duration: 1s;
+                  animation-fill-mode: both;
+                  animation-name: fadeInRight;
+                  bottom: 0;
+                  position: absolute;
+                  right: 0;
+                  width: 70%;
+
+                  @keyframes fadeInRight {
+                    0% {
+                      opacity: 0;
+                      transform: translate3d(100%, 0, 0);
+                    }
+
+                    to {
+                      opacity: 1;
+                      transform: translateZ(0);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        // .active{
+        //   .single-slide{
+        //     .slider-content-area{
+        //       .slide-content-wrapper{
+        //         .slide-content{
+        //          animation: fadeInUp;
+        //         }
+        //         .slider-img{
+        //           animation: fadeInRight;
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
+      }
+    }
+
+    .owl-nav {
+      .owl-prev {
+        background: rgba(236, 28, 35, 0.64);
+        color: #ddd;
+        font-size: 18px;
+        border-radius: 3px;
+        outline: none;
+        height: 40px;
+        right: -50px;
+        line-height: 40px;
+        margin-top: -20px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        transition: all 0.4s ease 0s;
+        width: 35px;
+        z-index: 999;
+      }
+
+      .owl-next {
+        right: 0px;
+        background: rgba(236, 28, 35, 0.64);
+        color: #ddd;
+        font-size: 18px;
+        border-radius: 3px;
+        outline: none;
+        height: 40px;
+        left: -50px;
+        line-height: 40px;
+        margin-top: -20px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        transition: all 0.4s ease 0s;
+        width: 35px;
+        z-index: 999;
+      }
+    }
+  }
+
+  &:hover {
+    .owl-nav {
+      .owl-prev {
+        right: auto;
+        left: 0;
+      }
+
+      .owl-next {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}
+
 .courses {
   padding-top: 20px;
   width: 100%;
@@ -879,6 +1113,11 @@ body {
           margin: 0 auto;
           z-index: 1;
           transition: all 0.5s ease;
+          color: #fff;
+          &:hover {
+            color: #2b2a5a;
+            transform: scale(1.3);
+          }
         }
 
         &::after {
@@ -1155,9 +1394,11 @@ body {
 
         h2 {
           margin-bottom: 14px;
+          line-height: 24px;
 
           a {
-            font-size: 1.1rem;
+            font-size: 18px;
+            line-height: 18px;
             color: #303030;
             font-weight: 700;
             text-transform: uppercase;
@@ -1439,7 +1680,6 @@ body {
   top: 0;
   overflow: hidden auto;
   display: none;
-
   .popup-video-main {
     text-align: center;
     position: absolute;
@@ -1452,7 +1692,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
     .popup-video-content {
       line-height: 0;
       width: 100%;
@@ -1462,12 +1701,10 @@ body {
       vertical-align: middle;
       text-align: left;
       z-index: 1045;
-
       .iframe-holder {
         width: 100%;
         height: 0;
         padding-top: 56.25%;
-
         .popup-close-btn {
           position: absolute;
           color: #fff;
@@ -1488,12 +1725,10 @@ body {
             sans-serif;
           opacity: 0.6;
           transition: 0.5s ease-in-out;
-
           &:hover {
             opacity: 1;
           }
         }
-
         iframe {
           display: block;
           top: 0;
