@@ -1,6 +1,5 @@
 .about-first-main-div {
-  background: rgba(0, 0, 0, 0) url(/src/images/about-images-first.webp)
-    no-repeat scroll center center / cover;
+  background: rgba(0, 0, 0, 0) url(/src/images/about-images-first.webp) no-repeat scroll center center / cover;
   position: relative;
   width: 100%;
   z-index: 1;
@@ -107,6 +106,7 @@
     .row {
       .col-lg-3 {
         padding: 0;
+
         .single-teacher {
           position: relative;
           box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
@@ -230,58 +230,63 @@
   }
 }
 
-.slider-main-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: url(/src/images/slider-about-bg.webp);
-  position: relative;
-  padding: 105px 0 110px 0;
-  background-attachment: fixed;
+.testimonial-area {
+  padding: 8rem 0;
+  background: url(../images/testimonial-bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-attachment: fixed;
+  position: relative;
 
-  .slider-img-div {
-    display: inline-block;
-    width: 77px;
-    height: 74px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    text-align: center;
-    overflow: hidden;
-    margin-bottom: 28px;
-    z-index: 5;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .slider-content {
-    z-index: 5;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    p {
-      text-align: center;
-      margin-bottom: 15px;
-      font-weight: 600;
-      max-width: 58%;
-    }
-  }
-
-  .slider-overlay {
+  &::after {
     position: absolute;
-    top: 0;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(44, 43, 94, 0.9);
-    z-index: 0;
+    content: "";
+    background: rgba(44, 43, 94, 0.9);
+  }
+
+  .owl-item {
+    .single-testimonial {
+      .testimonial-info {
+        width: 100%;
+        padding: 0 3rem;
+
+        .testimonial-img {
+          height: 77px;
+          margin: auto auto 28px;
+          width: 77px;
+
+          img {
+            border-radius: 50%;
+            border: 1px solid #f1f1f1;
+          }
+        }
+
+        .testimonial-content {
+          width: 100%;
+
+          h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+          }
+
+          p,
+          h5 {
+            font-size: .9rem;
+            color: #fff;
+            font-weight: 400;
+            margin-bottom: 15px;
+          }
+
+        }
+      }
+    }
   }
 }
 
@@ -414,6 +419,7 @@
       }
     }
   }
+
   .about-part-three {
     .container {
       .row {
@@ -424,11 +430,13 @@
       }
     }
   }
+
   .slider-main-div {
     .slider-content {
       h4 {
         font-size: 18px;
       }
+
       h5 {
         font-size: 16px;
       }
@@ -438,8 +446,7 @@
   .about-take-videotour-part-main-div {
     .container {
       .row {
-        .about-videopart-video {
-        }
+        .about-videopart-video {}
       }
     }
   }
@@ -448,6 +455,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .about-part-two {
     padding: 80px 0;
+
     .container {
       .row {
         .col-md-6 {
@@ -461,17 +469,20 @@
       }
     }
   }
+
   .about-part-three {
     .col-lg-3 {
       width: 45%; //niye single-teacher edende olmadi bunu edende oldu?
       margin-bottom: 30px;
     }
   }
+
   .slider-main-div {
     .slider-content {
       h4 {
         font-size: 18px;
       }
+
       h5 {
         font-size: 16px;
       }
@@ -482,6 +493,7 @@
 @media (min-width: 992px) and (max-width: 1200px) {
   .about-part-two {
     padding: 80px 0;
+
     .container {
       .row {
         .col-md-6 {
