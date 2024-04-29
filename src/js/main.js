@@ -1,36 +1,69 @@
 window.addEventListener("DOMContentLoaded", function () {
-  //header toggle-menu
-  const toggleBtn = document.querySelector(".toggle_btn");
-  const toggleIcon = document.querySelector(".toggle_btn i");
-  const dropDownMenu = document.querySelector(".dropdown_menu");
+  //scroll ile headerin olcusunun kicilmesi
 
-  toggleBtn.onclick = function () {
-    dropDownMenu.classList.toggle("open");
+  let header = document.querySelector("#header");
 
-    const isOpen = dropDownMenu.classList.contains("open");
-    toggleIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-  };
+  function handleScroll() {
+    let scrollPosition = window.scrollY;
 
-  //owl-carousel
+    if (scrollPosition >= 100) {
+      header.classList.add("sticky-header");
+    } else {
+      header.classList.remove("sticky-header");
+    }
+  }
 
-  $(document).ready(function () {
-    // Sayfa tamamen yüklendiğinde çalışacak kodlar buraya yazılır
-    $(".slider-owl").owlCarousel({
-      loop: true,
-      nav: true,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        600: {
-          items: 1,
-        },
-        1000: {
-          items: 1,
-        },
-      },
-    });
+  window.addEventListener("scroll", handleScroll);
+
+  //header search input-un acilmasi
+  let headerSearchBtn = document.querySelector(".header-search-button");
+  let searchArea = document.querySelector(".search-input-div");
+
+  headerSearchBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    searchArea.classList.toggle("search-input-open");
   });
+
+  //header-in burger menu acilmasi
+
+  let burgerBtn = document.querySelector(".burger-btn");
+  let mobMenu = document.querySelector(".mobile-header");
+
+  burgerBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    mobMenu.classList.toggle("show-mobile-header");
+
+    let icon = burgerBtn.querySelector("i");
+    if (icon.classList.contains("fa-bars")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  });
+
+  //mob-menu-da toggle-menularin acilmasi
+
+  let plusMinusBtns = document.querySelectorAll(".plus-minus-btn");
+
+  for (let btn of plusMinusBtns) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      let index = btn.getAttribute("data-index");
+      let toggleMenu = document.querySelector(
+        `.mob-nav-toggle[data-index="${index}"]`
+      );
+
+      toggleMenu.classList.toggle("show-toggle");
+
+      if (toggleMenu.classList.contains("show-toggle")) {
+        btn.textContent = "-";
+      } else {
+        btn.textContent = "+";
+      }
+    });
+  }
 
   //home ve about hissesindeki video-nun acilib baglanmasi
 

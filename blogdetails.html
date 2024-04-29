@@ -30,116 +30,223 @@
     <title>EduHome</title>
   </head>
   <body>
-    <header id="Header">
-      <div class="navbar">
-        <div class="logo">
-          <a href="/index.html">
-            <img src="./src/images/logo2.webp" alt="" />
-          </a>
-        </div>
-        <ul class="nav_links">
-          <li class="nav_item_li">
-            <a href="/index.html">Home</a>
-            <div class="dropdown">
-              <ul>
-                <li>
-                  <a href="/index.html">Home 1</a>
-                </li>
-                <li>
-                  <a href="/index.html">Home 2</a>
-                </li>
-                <li>
-                  <a href="/index.html">Home 3</a>
-                </li>
-              </ul>
+    <header id="header" class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-5 col-6 logo-div">
+            <div class="logo">
+              <a href="/index.html">
+                <img src="/src/images/logo2.webp" alt="edu-home" />
+              </a>
             </div>
-          </li>
-          <li class="nav_item_li">
-            <a href="/about.html" class="nav_item">About</a>
-          </li>
-          <li class="nav_item_li">
-            <a href="/blogs.html" class="nav_item">blogs</a>
-            <div class="dropdown">
-              <ul>
-                <li>
-                  <a href="/blogs.html">blogs</a>
-                </li>
-                <li>
-                  <a href="/blogdetails.html">blogs Details</a>
-                </li>
-              </ul>
+          </div>
+          <div class="col-md-9 col-sm-7 col-6 menu-div">
+            <div class="main-navbar">
+              <div class="main-menu">
+                <div class="main-nav">
+                  <ul class="main-nav-ul">
+                    <li class="main-nav-li">
+                      <a href="/index.html" class="main-nav-a">Home</a>
+                      <ul class="dropdown-ul">
+                        <li class="dropdown-ul-li">
+                          <a href="/index.html">Home One</a>
+                        </li>
+                        <li class="dropdown-ul-li">
+                          <a href="/index.html">Home Two</a>
+                        </li>
+                        <li class="dropdown-ul-li">
+                          <a href="/index.html">Home Three</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/about.html" class="main-nav-a">About</a>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/courses.html" class="main-nav-a">Courses</a>
+                      <ul class="dropdown-ul">
+                        <li class="dropdown-ul-li">
+                          <a href="/courses.html">Courses</a>
+                        </li>
+                        <li class="dropdown-ul-li">
+                          <a href="/coursedetails.html">Course Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/event.html" class="main-nav-a">Event</a>
+                      <ul class="dropdown-ul">
+                        <li class="dropdown-ul-li">
+                          <a href="/event.html">Event</a>
+                        </li>
+                        <li class="dropdown-ul-li">
+                          <a href="/eventdetails.html">Event Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/teacher.html" class="main-nav-a">Teacher</a>
+                      <ul class="dropdown-ul">
+                        <li class="dropdown-ul-li">
+                          <a href="/teacher.html">Teacher</a>
+                        </li>
+                        <li class="dropdown-ul-li">
+                          <a href="/teachers_details.html">Teacher Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/blog.html" class="main-nav-a">Blog</a>
+                      <ul class="dropdown-ul">
+                        <li class="dropdown-ul-li">
+                          <a href="/blog.html">Blog</a>
+                        </li>
+                        <li class="dropdown-ul-li">
+                          <a href="/blogdetails.html">Blog Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/contact.html" class="main-nav-a">Contact</a>
+                    </li>
+                    <li class="main-nav-li">
+                      <a href="/about.html" class="main-nav-a">Buy Now</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="search-button">
+                <a href="" class="header-search-button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <div class="search-input-div">
+                  <div class="search-form">
+                    <form action="">
+                      <input type="text" placeholder="Search here..." />
+                      <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <a href="" class="burger-btn">
+                <i class="fa-solid fa-bars"></i>
+              </a>
             </div>
-          </li>
-          <li class="nav_item_li">
-            <a href="/event.html" class="nav_item">Event</a>
-            <div class="dropdown">
-              <ul>
-                <li>
-                  <a href="/event.html">Event</a>
-                </li>
-                <li>
-                  <a href="/eventdetails.html">Event Details</a>
-                </li>
-              </ul>
+          </div>
+
+          <div class="col-12 mobile-header">
+            <div class="mobile-menu">
+              <div class="main-bar">
+                <nav class="main-mob-nav">
+                  <ul class="main-mob-nav-ul">
+                    <li class="main-mob-nav-li">
+                      <a href="/index.html" class="main-mob-nav-a">Home</a>
+                      <a href="" class="plus-minus-btn" data-index="1">+</a>
+                      <ul class="mob-nav-toggle" data-index="1">
+                        <li class="mob-nav-toggle-li">
+                          <a href="/index.html" class="mob-nav-toggle-a"
+                            >Home One</a
+                          >
+                        </li>
+                        <li class="mob-nav-toggle-li">
+                          <a href="/index.html" class="mob-nav-toggle-a"
+                            >Home Two</a
+                          >
+                        </li>
+                        <li class="mob-nav-toggle-li">
+                          <a href="/index.html" class="mob-nav-toggle-a"
+                            >Home Three</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/about.html" class="main-mob-nav-a">About</a>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/courses.html" class="main-mob-nav-a">Courses</a>
+                      <a href="" class="plus-minus-btn" data-index="2">+</a>
+                      <ul class="mob-nav-toggle" data-index="2">
+                        <li class="mob-nav-toggle-li">
+                          <a href="/courses.html" class="mob-nav-toggle-a"
+                            >Courses</a
+                          >
+                        </li>
+                        <li class="mob-nav-toggle-li">
+                          <a
+                            href="/coursedetails.html"
+                            #
+                            class="mob-nav-toggle-a"
+                            >Course Details</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/event.html" class="main-mob-nav-a">Event</a>
+                      <a href="" class="plus-minus-btn" data-index="3">+</a>
+                      <ul class="mob-nav-toggle" data-index="3">
+                        <li class="mob-nav-toggle-li">
+                          <a href="/event.html" class="mob-nav-toggle-a"
+                            >Event</a
+                          >
+                        </li>
+                        <li class="mob-nav-toggle-li">
+                          <a href="/eventdetails.html" class="mob-nav-toggle-a"
+                            >Event Details</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/teacher.html" class="main-mob-nav-a"
+                        >Teachers</a
+                      >
+                      <a href="" class="plus-minus-btn" data-index="4">+</a>
+                      <ul class="mob-nav-toggle" data-index="4">
+                        <li class="mob-nav-toggle-li">
+                          <a href="/teacher.html" class="mob-nav-toggle-a"
+                            >Teachers</a
+                          >
+                        </li>
+                        <li class="mob-nav-toggle-li">
+                          <a
+                            href="/teachers_details.html"
+                            class="mob-nav-toggle-a"
+                            >Teacher Details</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/blog.html" class="main-mob-nav-a">Blog</a>
+                      <a href="" class="plus-minus-btn" data-index="5">+</a>
+                      <ul class="mob-nav-toggle" data-index="5">
+                        <li class="mob-nav-toggle-li">
+                          <a href="/blog.html" class="mob-nav-toggle-a">Blog</a>
+                        </li>
+                        <li class="mob-nav-toggle-li">
+                          <a href="/blogdetails.html" class="mob-nav-toggle-a"
+                            >Blog Details</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/contact.html" class="main-mob-nav-a">Contact</a>
+                    </li>
+                    <li class="main-mob-nav-li">
+                      <a href="/about.html" class="main-mob-nav-a">Buy Now</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
-          </li>
-          <li class="nav_item_li">
-            <a href="/teacher.html" class="nav_item">Teacher</a>
-            <div class="dropdown">
-              <ul>
-                <li>
-                  <a href="/teacher.html">Teacher</a>
-                </li>
-                <li>
-                  <a href="/teachers_details.html">Teacher Details</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav_item_li">
-            <a href="/blog.html" class="nav_item">Blog</a>
-            <div class="dropdown">
-              <ul>
-                <li>
-                  <a href="/blog.html">Blog</a>
-                </li>
-                <li>
-                  <a href="/blogdetails.html">Blog Details</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav_item_li">
-            <a href="/contact.html" class="nav_item">Contact</a>
-          </li>
-          <li class="nav_item_li">
-            <a href="#" class="nav_item">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </li>
-        </ul>
-        <div class="toggle_btn">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="dropdown_menu">
-          <li>
-            <a href="/index.html">Home</a>
-          </li>
-          <li>
-            <a href="/about.html">About</a>
-          </li>
-          <li>
-            <a href="/blogs.html">blogs</a>
-          </li>
-          <li>
-            <a href="/teacher.html">Teacher</a>
-          </li>
-          <li>
-            <a href="/blog.html">Blog</a>
-          </li>
-          <li>
-            <a href="/contact.html">Contact</a>
-          </li>
+          </div>
         </div>
       </div>
     </header>
